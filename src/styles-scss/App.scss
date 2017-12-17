@@ -1,0 +1,46 @@
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Base Application Styles */
+body {
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// override top bar colors
+.navbar-dark {
+  background: red !important;
+}
+.navbar-brand {
+  color: green !important;
+  font-weight: bold;
+}
+h1 {
+  text-align: center;
+  color: red !important;
+}
+
+.wiggle-chris {
+  height: 50%;
+  animation: wigglechris 2s ease-in-out infinite alternate;
+}
+
+.wiggle-veronika {
+  height: 50%;
+
+  animation: wiggleveronika 2s ease-in-out infinite alternate;
+}
+
+@keyframes wigglechris {
+  0% {transform: rotate(-5deg);}
+  100% {transform: rotate(5deg);
+  margin-left: -100px;}
+}
+
+@keyframes wiggleveronika {
+  0% {transform: rotate(5deg);}
+  100% {transform: rotate(-5deg);
+  margin-left: 100px;}
+}
