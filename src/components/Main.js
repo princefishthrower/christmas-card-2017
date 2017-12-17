@@ -1,6 +1,6 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
-require('../music/jinglebells.mp3'); // starts playing on page load
+let jinglebells = require('../music/jinglebells.mp3'); // starts playing on page load
 
 import React from 'react';
 import Sound from 'react-sound';
@@ -44,19 +44,11 @@ class AppComponent extends React.Component {
           </div>
 
         </div>
-        <Sound
-          url="music/jinglebells.mp3"
-          playStatus={Sound.status.PLAYING}
-          playFromPosition={300 /* in milliseconds */}
-          onLoading={this.handleSongLoading}
-          onPlaying={this.handleSongPlaying}
-          onFinishedPlaying={this.handleSongFinishedPlaying}
-        />
       </div>
     );
   }
   componentDidMount() {
-      //new Audio(jinglebells).play()
+      new Audio(jinglebells).play()
 
       // --- common properties ---
 
