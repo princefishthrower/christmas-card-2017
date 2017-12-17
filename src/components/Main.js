@@ -1,10 +1,11 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
+require('../music/jinglebells.mp3'); // starts playing on page load
 
 import React from 'react';
 import Sound from 'react-sound';
 
-//
+// images
 let chris = require('../images/chris.png');
 let veronika = require('../images/veronika.png');
 
@@ -55,6 +56,7 @@ class AppComponent extends React.Component {
     );
   }
   componentDidMount() {
+      //new Audio(jinglebells).play()
 
       // --- common properties ---
 
